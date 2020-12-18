@@ -1,0 +1,23 @@
+{
+  "name": "homebridge-commanditswitch",
+  "version": "0.4.1",
+  "description": "CommandItSwitch for Homebridge: https://github.com/AlexMaghen/homebridge-commanditswitch",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AlexMaghen/homebridge-commanditswitch.git"
+  },
+  "bugs": {
+    "url": "http://github.com/AlexMaghen/homebridge-commanditswitch/issues"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "dependencies": {
+    "node-persist": "^2.1.0"
+  }
+}

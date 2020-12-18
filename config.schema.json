@@ -1,0 +1,21 @@
+{
+    "pluginAlias": "CommandItSwitch",
+    "pluginType": "accessory",
+    "singular": false,
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "title": "Name",
+                "type": "string",
+                "required": true
+            },
+            "exe": {
+                "title": "Exe",
+                "type": "string",
+                "required": true,
+                "description": "When the switch is turned on, it will immediately execute the file in homebridge_directory/CommandItSwitch/Exes/ that has this exect name"
+            }
+        }
+    }
+}
