@@ -51,6 +51,7 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
     //shell.exec(this.exe);
 
     shell.exec('cd /var/lib/homebridge/CommandItSwitchExes/');
+    shell.exec('ls -la');
     shell.exec('./' + this.exe);
     
     shell.exec
