@@ -3,6 +3,9 @@
   "version": "0.4.2",
   "description": "CommandItSwitch for Homebridge: https://github.com/AlexMaghen/homebridge-commanditswitch",
   "license": "ISC",
+  "np": {
+    "2fa": false
+  },
   "keywords": [
     "homebridge-plugin"
   ],
