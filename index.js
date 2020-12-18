@@ -46,9 +46,12 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
   
   if (on)
   {
-    var ExecPath = '/var/lib/homebridge/CommandItSwitchExes/' + this.exe;
-    this.log("Executing ('exe'): " + ExecPath);
-    shell.exec(this.exe);
+    //var ExecPath = '/var/lib/homebridge/CommandItSwitchExes/' + this.exe;
+    //this.log("Executing ('exe'): " + ExecPath);
+    //shell.exec(this.exe);
+
+    shell.exec('cd /var/lib/homebridge/CommandItSwitchExes/');
+    shell.exec('./' + this.exe);
     
     shell.exec
     setTimeout(function()
