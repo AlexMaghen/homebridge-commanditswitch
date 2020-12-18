@@ -1,6 +1,6 @@
 {
   "name": "homebridge-commanditswitch",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "description": "CommandItSwitch for Homebridge: https://github.com/AlexMaghen/homebridge-commanditswitch",
   "license": "ISC",
   "np": {
