@@ -1,4 +1,5 @@
 "use strict";
+const shell=require('shelljs');
 
 var Service, Characteristic, HomebridgeAPI;
 
@@ -46,6 +47,7 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
   if (on)
   {
   	this.log("Executing ('exe'): " + this.exe);
+    shell.exec('cd /');
     setTimeout(function()
     {
       this._service.setCharacteristic(Characteristic.On, false);
