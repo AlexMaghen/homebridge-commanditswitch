@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ./CommandItSwitchExes
+dt=$(date '+%d/%m/%Y %H:%M:%S');
+echo "$dt" >> CommandItSwitchLog.txt
+

@@ -1,4 +1,0 @@
-#!/bin/bash
-cd ./CommandItSwitchExes
-echo "It worked!" >> CommandItSwitchLog.txt
-
