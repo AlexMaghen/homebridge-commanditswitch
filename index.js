@@ -1,5 +1,4 @@
 "use strict";
-const shell=require('shelljs');
 const { exec } = require("child_process");
 
 var Service, Characteristic, HomebridgeAPI;
@@ -47,10 +46,8 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
   
   if (on)
   {
-    //This
     var ExecPath = './CommandItSwitchExes/' + this.exe;
     this.log("Executing ('exe'): " + ExecPath);
-    //shell.exec(ExecPath);
    
     exec(ExecPath, (error, stdout, stderr) => {
       if (error) {
@@ -63,7 +60,7 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
       }
       console.log(`stdout: ${stdout}`);
       });
-      this.log("Completed exec.");
+      this.log("Completed executing " + ExecPath);
 
 
 

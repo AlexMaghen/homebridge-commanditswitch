@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Stopping (killing) omxplayer..."
+#First kill any omxplayer running...
+killall -s 9 omxplayer
+killall -s 9 omxplayer.bin
