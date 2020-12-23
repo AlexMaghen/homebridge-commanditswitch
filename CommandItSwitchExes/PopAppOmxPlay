@@ -3,7 +3,8 @@ echo "Starting PopAppRadio Stream using omxplayer..."
 #First kill any omxplayer running...
 killall -s 9 omxplayer
 killall -s 9 omxplayer.bin
+amixer -q -M sset Headphone 60%
 #Play the "blast" intro...
-#omxplayer --no-keys -o Sounds/Baa.mp3
+omxplayer --no-keys -o local Sounds/DiscoIntro.mp3
 #Play the stream...
-omxplayer --no-keys -o http://streaming.live365.com/a21442
+omxplayer --no-keys -o local http://streaming.live365.com/a21442
