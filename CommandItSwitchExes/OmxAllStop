@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Stopping (killing) omxplayer..."
 #First kill any omxplayer running...
+amixer -q -M sset Headphone 0%
 killall -s 9 omxplayer
 killall -s 9 omxplayer.bin

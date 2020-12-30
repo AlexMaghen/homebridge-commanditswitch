@@ -46,7 +46,20 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
   
   if (on)
   {
-    var ExecPath = './CommandItSwitchExes/' + this.exe;
+
+    // Change the working directory...
+    console.log('Current Starting directory: ' + process.cwd());
+    try {
+      process.chdir('./CommandItSwitchExes');
+      console.log('New directory: ' + process.cwd());
+    }
+    catch (err) {
+      console.log('chdir: ' + err);
+    }
+
+    var ExecPath = this.exe;
+
+    //var ExecPath = './CommandItSwitchExes/' + this.exe;
     this.log("Executing ('exe'): " + ExecPath);
    
     exec(ExecPath, (error, stdout, stderr) => {
