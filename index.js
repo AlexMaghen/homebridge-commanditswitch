@@ -1,6 +1,6 @@
 "use strict";
 const { exec } = require("child_process");
-
+const COMMANDDIR = '/var/lib/homebridge/CommandItSwitchExes';
 var Service, Characteristic, HomebridgeAPI;
 
 module.exports = function(homebridge) {
@@ -46,15 +46,12 @@ CommandItSwitch.prototype._setOn = function(on, callback) {
   
   if (on)
   {
-
     // Change the working directory...
     console.log('Current Starting directory: ' + process.cwd());
-    try {
-      process.chdir('./CommandItSwitchExes');
+    if(process.cwd() != COMMANDDIR)
+    {
+      process.chdir(COMMANDDIR);
       console.log('New directory: ' + process.cwd());
-    }
-    catch (err) {
-      console.log('chdir: ' + err);
     }
 
     var ExecPath = this.exe;
